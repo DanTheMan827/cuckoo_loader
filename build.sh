@@ -73,7 +73,8 @@ make
 cd ..
 
 mkdir -p bin
-cd bin 
+cd bin
+pwd
 mkdir -p nest
 mkdir -p host
 cp ../omap_loader/omap_loader ./host

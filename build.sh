@@ -35,7 +35,7 @@ cd ../..
 if [ ! -f x-loader/x-loader/x-load.bin ]
     then
         echo "[E] - Error, x-loader compile failed."
-        exit
+        exit 1
     fi
 
 echo "[I] - Cross compiling u-boot."
@@ -50,7 +50,7 @@ cd ../../..
 if [ ! -f NestDFUAttack-master/Dev/u-boot/u-boot.bin ]
     then
         echo "[E] - Error, u-boot compile failed."
-        exit
+        exit 1
     fi
 
 echo "[I] - Cross compiling Linux (this could take a few minutes.)"
@@ -63,7 +63,7 @@ cd ../../..
 if [ ! -f NestDFUAttack-master/Dev/linux/arch/arm/boot/uImage ]
     then
         echo "[E] - Error, Linux kernel compile failed."
-        exit
+        exit 1
     fi
 
 echo "[I] - Compiling omap_loader for host machine."

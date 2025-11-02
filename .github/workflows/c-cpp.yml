@@ -16,13 +16,12 @@ jobs:
 
     - name: Install dependencies
       run: |
-        sudo (
-          echo "set man-db/auto-update false" | debconf-communicate dpkg-reconfigure man-db
-          apt-get update
-          apt-get install u-boot-tools \
-            gcc-arm-linux-gnueabi \
-            -y
-        )
+        sudo echo "set man-db/auto-update false" | debconf-communicate dpkg-reconfigure man-db
+        sudo apt-get update
+        sudo apt-get install \
+          u-boot-tools \
+          gcc-arm-linux-gnueabi \
+        -y
 
     - name: build
       run: ./build.sh

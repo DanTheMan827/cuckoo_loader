@@ -23,6 +23,7 @@ jobs:
           u-boot-tools \
           gcc-arm-linux-gnueabi \
         -y
+        sudo ln -s arm-linux-gnueabi-gcc /usr/bin/arm-none-linux-gnueabi-gcc
 
     - name: build
       run: ./build.sh

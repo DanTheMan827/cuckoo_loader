@@ -1,4 +1,5 @@
 #/bin/bash
+pwd
 mkdir -p build
 cd ./build
 
